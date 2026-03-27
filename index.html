@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sometimes I am</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,500&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js" defer></script>
+</head>
+
+<body>
+
+  <header class="interface">
+
+    <h1>
+      <span class="span-english">sometimes i am</span>
+      <span class="active-sitename" id="active-sitename"></span>
+    </h1>
+
+    <div class="nav-button-wrapper">
+
+      <div class="nuclear-status" id="nuclear-status" aria-live="polite" hidden>
+        <span class="nuclear-status-label">nuclear</span>
+        <span id="nuclear-current">0</span>
+        <span class="nuclear-status-sep">/</span>
+        <span id="nuclear-end">0</span>
+      </div>
+
+      <nav aria-label="Language">
+        <label for="language-menu" class="sr-only">Language</label>
+        <select id="language-menu" name="language-menu" class="lang-select">
+          <option value="en" lang="en">English</option>
+          <option value="es" lang="es">Español</option>
+          <option value="fr" lang="fr">Français</option>
+          <option value="it" lang="it">Italiano</option>
+          <option value="de" lang="de">Deutsch</option>
+          <option value="ja" lang="ja">日本語</option>
+          <option value="ko" lang="ko">한국어</option>
+          <option value="fa" lang="fa" dir="rtl">فارسی</option>
+          <option value="ur" lang="ur" dir="rtl">اردو</option>
+          <option value="ms" lang="ms">Bahasa Melayu</option>
+        </select>
+      </nav>
+
+      <button class="btn-config" aria-label="Preferences" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path d="M195.1 9.5C198.1-5.3 211.2-16 226.4-16l59.8 0c15.2 0 28.3 10.7 31.3 25.5L332 79.5c14.1 6 27.3 13.7 39.3 22.8l67.8-22.5c14.4-4.8 30.2 1.2 37.8 14.4l29.9 51.8c7.6 13.2 4.9 29.8-6.5 39.9L447 233.3c.9 7.4 1.3 15 1.3 22.7s-.5 15.3-1.3 22.7l53.4 47.5c11.4 10.1 14 26.8 6.5 39.9l-29.9 51.8c-7.6 13.1-23.4 19.2-37.8 14.4l-67.8-22.5c-12.1 9.1-25.3 16.7-39.3 22.8l-14.4 69.9c-3.1 14.9-16.2 25.5-31.3 25.5l-59.8 0c-15.2 0-28.3-10.7-31.3-25.5l-14.4-69.9c-14.1-6-27.2-13.7-39.3-22.8L73.5 432.3c-14.4 4.8-30.2-1.2-37.8-14.4L5.8 366.1c-7.6-13.2-4.9-29.8 6.5-39.9l53.4-47.5c-.9-7.4-1.3-15-1.3-22.7s.5-15.3 1.3-22.7L12.3 185.8c-11.4-10.1-14-26.8-6.5-39.9L35.7 94.1c7.6-13.2 23.4-19.2 37.8-14.4l67.8 22.5c12.1-9.1 25.3-16.7 39.3-22.8L195.1 9.5zM256.3 336a80 80 0 1 0 -.6-160 80 80 0 1 0 .6 160z" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="instruction-wrapper">
+      <h2 class="instruction-text" lang="en"></h2>
+    </div>
+
+  </header>
+
+  <div class="content-container">
+
+    <main class="button-grid"></main>
+
+    <div class="messages-output-wrapper" aria-live="polite" aria-atomic="true">
+      <div class="message-text" role="status"></div>
+      <div class="message-synonym" role="status"></div>
+    </div>
+
+    <form class="admin-panel" id="preferences-panel" aria-label="Preferences" aria-hidden="true">
+
+      <div class="label-input-wrapper">
+        <label for="maxFZMessage">Maximum Font Size (Message)</label>
+        <input type="range" id="maxFZMessage" name="maxFZMessage" min="0" max="20" />
+        <output for="maxFZMessage"></output>
+      </div>
+
+      <div class="label-input-wrapper">
+        <label for="maxFZSynonym">Maximum Font Size (Synonym)</label>
+        <input type="range" id="maxFZSynonym" name="maxFZSynonym" min="0" max="20" />
+        <output for="maxFZSynonym"></output>
+      </div>
+
+      <div class="label-input-wrapper">
+        <label for="nuclearTrigger">All-Language Start Threshold</label>
+        <input type="range" id="nuclearTrigger" name="nuclearTrigger" min="0" max="500" />
+        <output for="nuclearTrigger"></output>
+      </div>
+
+      <div class="label-input-wrapper">
+        <label for="nuclearEnd">All-Language End Threshold</label>
+        <input type="range" id="nuclearEnd" name="nuclearEnd" min="50" max="1000" />
+        <output for="nuclearEnd"></output>
+      </div>
+
+      <div class="label-input-wrapper">
+        <label for="maxNuclearNodes">Nuclear: Maximum Text Nodes</label>
+        <input type="range" id="maxNuclearNodes" name="maxNuclearNodes" min="40" max="2000" />
+        <output for="maxNuclearNodes"></output>
+      </div>
+
+      <div class="label-input-wrapper">
+        <label for="maxFZMessageNode">Maximum Font Size (Nuclear Message)</label>
+        <input type="range" id="maxFZMessageNode" name="maxFZMessageNode" min="0" max="10" />
+        <output for="maxFZMessageNode"></output>
+      </div>
+
+      <div class="label-input-wrapper">
+        <label for="maxFZSynonymNode">Maximum Font Size (Nuclear Synonym)</label>
+        <input type="range" id="maxFZSynonymNode" name="maxFZSynonymNode" min="0" max="10" />
+        <output for="maxFZSynonymNode"></output>
+      </div>
+
+      <div class="label-input-wrapper">
+        <label for="nodeOpacityBtmLimit">Nuclear Text Opacity Bottom Limit</label>
+        <input type="range" id="nodeOpacityBtmLimit" name="nodeOpacityBtmLimit" min="0" max="1" step=".1" />
+        <output for="nodeOpacityBtmLimit"></output>
+      </div>
+
+      <div class="label-input-wrapper">
+        <label for="nodeOpacityTopLimit">Nuclear Text Opacity Upper Limit</label>
+        <input type="range" id="nodeOpacityTopLimit" name="nodeOpacityTopLimit" min="0" max="1" step=".1" />
+        <output for="nodeOpacityTopLimit"></output>
+      </div>
+
+      <div class="label-input-wrapper checkbox-wrapper">
+        <label for="reset-to-defaults">Reset to Defaults</label>
+        <input type="checkbox" id="reset-to-defaults">
+      </div>
+
+    </form>
+
+  </div>
+
+</body>
+</html>

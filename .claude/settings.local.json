@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:sometimesiam.org)",
+      "Bash(curl -s https://sometimesiam.org/)",
+      "Bash(curl -s https://sometimesiam.org/styles-updated.css)",
+      "Bash(curl -s https://sometimesiam.org/app-new.js)",
+      "Bash(curl -s https://sometimesiam.org/js-new/state/language-state.js)",
+      "Bash(curl -s https://sometimesiam.org/js-new/text-updates.js)",
+      "Bash(curl -s https://sometimesiam.org/js-new/menu.js)",
+      "Bash(curl -s https://sometimesiam.org/js-new/buttons.js)",
+      "Bash(curl -s https://sometimesiam.org/js-new/sounds.js)",
+      "Bash(curl -s https://sometimesiam.org/js-new/config.js)",
+      "Bash(curl -s https://sometimesiam.org/js-new/text-data.js)",
+      "Bash(curl -s https://sometimesiam.org/js-new/ui-text.js)",
+      "Bash(mv \"04siasq2mp3.mp3\" \"04siasq2.mp3\")",
+      "Bash(mv \"08theyare-mixmp3.mp3\" \"08theyare-mix.mp3\")",
+      "Bash(mv \"24beyou-plzmp3.mp3\" \"24beyou-plz.mp3\")",
+      "Bash(mv \"48youcant=sad.mp3\" \"48youcant-sad.mp3\")"
+    ]
+  }
+}
