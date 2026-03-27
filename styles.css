@@ -376,7 +376,7 @@ input[type="range"]::-moz-range-thumb {
   height: 16px;
   width: 16px;
   border-radius: 50%;
-  background: var(--englishSitename);
+  background: #444;
   border: none;
   cursor: pointer;
 }
