@@ -1,4 +1,4 @@
-import { config, configResetData } from "./config-data.js"
+import { config, configResetData, STORAGE_KEY } from "./config-data.js"
 import { PREFERENCES_TEXT } from "./ui-text.js"
 import { getLang } from "./state/language-state.js"
 
@@ -78,12 +78,14 @@ export function updateConfig(id, rawValue) {
   const num = Number(rawValue)
   if (Number.isNaN(num)) return
   config[id] = num
+  saveConfig()
 }
 
 export function resetToDefaults() {
   for (const [key, val] of Object.entries(configResetData)) {
     if (key in config) config[key] = val
   }
+  localStorage.removeItem(STORAGE_KEY)
   syncAdminPanelFromConfig()
 }
 
@@ -96,6 +98,11 @@ export function syncAdminPanelFromConfig() {
       updateOutput(slider.id, config[key])
     }
   })
+
+}
+
+function saveConfig() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(config))
 }
 
 function updateOutput(id, value) {
