@@ -39,6 +39,7 @@ export const PREFERENCES_TEXT = {
     nodeOpacityBtmLimit: "Polyglot mode primary text: opacity lower limit",
     nodeOpacityTopLimit: "Polyglot mode secondary text: opacity upper limit",
     hideMainTextAtNuclear: "Hide main text during polyglot mode",
+    colorsMode: "Colors mode",
     "reset-to-defaults": "Reset to defaults",
   },
   fr: {
@@ -55,6 +56,7 @@ export const PREFERENCES_TEXT = {
     nodeOpacityBtmLimit: "Mode polyglotte texte primaire : limite inférieure d'opacité",
     nodeOpacityTopLimit: "Mode polyglotte texte secondaire : limite supérieure d'opacité",
     hideMainTextAtNuclear: "Masquer le texte principal en mode polyglotte",
+    colorsMode: "Mode couleurs",
     "reset-to-defaults": "Réinitialiser par défaut",
   },
   ja: {
@@ -71,6 +73,7 @@ export const PREFERENCES_TEXT = {
     nodeOpacityBtmLimit: "多言語モード 主要テキスト：不透明度の下限",
     nodeOpacityTopLimit: "多言語モード 副テキスト：不透明度の上限",
     hideMainTextAtNuclear: "多言語モード中はメインテキストを非表示",
+    colorsMode: "カラーモード",
     "reset-to-defaults": "既定値にリセット",
   },
   it: {
@@ -87,6 +90,7 @@ export const PREFERENCES_TEXT = {
     nodeOpacityBtmLimit: "Modalità poliglotta testo primario: limite inferiore di opacità",
     nodeOpacityTopLimit: "Modalità poliglotta testo secondario: limite superiore di opacità",
     hideMainTextAtNuclear: "Nascondi il testo principale in modalità poliglotta",
+    colorsMode: "Modalità colori",
     "reset-to-defaults": "Ripristina valori predefiniti",
   },
   es: {
@@ -103,6 +107,7 @@ export const PREFERENCES_TEXT = {
     nodeOpacityBtmLimit: "Modo políglota texto primario: límite inferior de opacidad",
     nodeOpacityTopLimit: "Modo políglota texto secundario: límite superior de opacidad",
     hideMainTextAtNuclear: "Ocultar el texto principal en modo políglota",
+    colorsMode: "Modo colores",
     "reset-to-defaults": "Restablecer valores predeterminados",
   },
   fa: {
@@ -119,6 +124,7 @@ export const PREFERENCES_TEXT = {
     nodeOpacityBtmLimit: "حالت چندزبانه متن اولیه: حد پایین شفافیت",
     nodeOpacityTopLimit: "حالت چندزبانه متن ثانویه: حد بالای شفافیت",
     hideMainTextAtNuclear: "پنهان‌کردن متن اصلی در حالت چندزبانه",
+    colorsMode: "حالت رنگ‌ها",
     "reset-to-defaults": "بازنشانی به پیش‌فرض‌ها",
   },
   ur: {
@@ -135,6 +141,7 @@ export const PREFERENCES_TEXT = {
     nodeOpacityBtmLimit: "کثیراللسانی موڈ بنیادی متن: شفافیت کی نچلی حد",
     nodeOpacityTopLimit: "کثیراللسانی موڈ ثانوی متن: شفافیت کی بالائی حد",
     hideMainTextAtNuclear: "کثیراللسانی موڈ میں مرکزی متن چھپائیں",
+    colorsMode: "رنگ موڈ",
     "reset-to-defaults": "ڈیفالٹس پر ری سیٹ کریں",
   },
   de: {
@@ -151,6 +158,7 @@ export const PREFERENCES_TEXT = {
     nodeOpacityBtmLimit: "Vielsprachiger Modus Text primär: untere Deckkraftgrenze",
     nodeOpacityTopLimit: "Vielsprachiger Modus Text sekundär: obere Deckkraftgrenze",
     hideMainTextAtNuclear: "Haupttext im vielsprachigen Modus ausblenden",
+    colorsMode: "Farbmodus",
     "reset-to-defaults": "Auf Standardwerte zurücksetzen",
   },
   ko: {
@@ -167,6 +175,7 @@ export const PREFERENCES_TEXT = {
     nodeOpacityBtmLimit: "다언어 모드 기본 텍스트: 불투명도 하한",
     nodeOpacityTopLimit: "다언어 모드 보조 텍스트: 불투명도 상한",
     hideMainTextAtNuclear: "다언어 모드에서 메인 텍스트 숨기기",
+    colorsMode: "색상 모드",
     "reset-to-defaults": "기본값으로 재설정",
   },
   ms: {
@@ -183,6 +192,7 @@ export const PREFERENCES_TEXT = {
     nodeOpacityBtmLimit: "Mod poliglot teks primer: had bawah kelegapan",
     nodeOpacityTopLimit: "Mod poliglot teks sekunder: had atas kelegapan",
     hideMainTextAtNuclear: "Sembunyikan teks utama semasa mod poliglot",
+    colorsMode: "Mod warna",
     "reset-to-defaults": "Tetapkan semula kepada lalai",
   },
 }

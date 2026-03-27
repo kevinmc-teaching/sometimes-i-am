@@ -5,6 +5,8 @@ import { config } from "./config-data.js"
 import * as sounds from "./sounds.js"
 
 
+let activeColorChannel = null
+
 const activeSitenameSpan = document.getElementById("active-sitename")
 const instructionTextSpan = document.querySelector(".instruction-text")
 const langMenu = document.getElementById("language-menu")
@@ -58,6 +60,10 @@ export function updateMainText(btnIdOverride) {
 export function newTextNode() {
   const { language, text, synonym, sound, number } = randomTextBlock()
 
+  if (config.colorsMode && activeColorChannel === null) {
+    activeColorChannel = ["r", "g", "b"][Math.floor(Math.random() * 3)]
+  }
+
   // Enforce node cap — remove oldest if at limit
   const existingNodes = messagesWrapper.querySelectorAll(".new-text-node")
   if (existingNodes.length >= config.maxNuclearNodes) {
@@ -71,12 +77,14 @@ export function newTextNode() {
   newMessage.textContent = text
   newMessage.classList.add("message-text")
   newMessage.style.fontSize = randomFontSize(config.maxFZMessageNode)
+  if (config.colorsMode) newMessage.style.color = randomColor()
   newNodeWrapper.appendChild(newMessage)
 
   const newSynonym = document.createElement("p")
   newSynonym.textContent = synonym
   newSynonym.classList.add("message-synonym", "synonym-node")
   newSynonym.style.fontSize = randomFontSize(config.maxFZSynonymNode)
+  if (config.colorsMode) newSynonym.style.color = randomGrey()
   newNodeWrapper.appendChild(newSynonym)
 
   messagesWrapper.appendChild(newNodeWrapper)
@@ -124,6 +132,7 @@ function randomOpacity() {
 
 export function removeTextNodes() {
   messagesWrapper.querySelectorAll(".new-text-node").forEach((n) => n.remove())
+  activeColorChannel = null
 }
 
 export function fadeOutTextNodes(onComplete) {
@@ -136,6 +145,7 @@ export function fadeOutTextNodes(onComplete) {
     nodes.forEach((n) => n.remove())
     onComplete?.()
   }, 1000)
+  activeColorChannel = null
 }
 
 function randomNumber(input) {
@@ -144,4 +154,16 @@ function randomNumber(input) {
 
 function randomFontSize(input) {
   return `${randomNumber(input)}cqw`
+}
+
+function randomColor() {
+  const val = Math.floor(Math.random() * 128)
+  const r = activeColorChannel === "r" ? val : 0
+  const g = activeColorChannel === "g" ? val : 0
+  const b = activeColorChannel === "b" ? val : 0
+  return `rgb(${r} ${g} ${b})`
+}
+
+function randomGrey() {
+  return `hsl(0 0% ${40 + Math.random() * 30}%)`
 }

@@ -14,6 +14,7 @@ export const configResetData = {
   nodeOpacityBtmLimit: 0.3,
   nodeOpacityTopLimit: 0.7,
   hideMainTextAtNuclear: true,
+  colorsMode: false,
 }
 
 function loadConfig() {

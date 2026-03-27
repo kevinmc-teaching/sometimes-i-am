@@ -337,7 +337,8 @@ h1 .span-english {
   padding-left: .25rem;
 }
 
-#reset-to-defaults {
+#reset-to-defaults,
+#colorsMode {
   justify-self: start;
 }
 

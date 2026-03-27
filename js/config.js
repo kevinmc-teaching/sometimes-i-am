@@ -67,6 +67,12 @@ function handleAdminChange(e) {
     return
   }
 
+  if (type === "checkbox" && id in config) {
+    config[id] = checked
+    saveConfig()
+    return
+  }
+
   if (type === "range") {
     updateConfig(id, input.value)
     updateOutput(id, input.value)
@@ -99,6 +105,13 @@ export function syncAdminPanelFromConfig() {
     }
   })
 
+  const checkboxes = adminPanel.querySelectorAll("input[type='checkbox']")
+  checkboxes.forEach((checkbox) => {
+    const key = checkbox.id
+    if (key in config && typeof config[key] === "boolean") {
+      checkbox.checked = config[key]
+    }
+  })
 }
 
 function saveConfig() {
