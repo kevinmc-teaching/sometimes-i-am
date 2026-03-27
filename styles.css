@@ -295,6 +295,9 @@ h1 .span-english {
 #nuclear-current {
   color: var(--activeSitename);
   font-weight: var(--fw-regular);
+  min-width: 4ch;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
 }
 
 .admin-panel {
