@@ -15,6 +15,7 @@ export const configResetData = {
   nodeOpacityTopLimit: 0.7,
   hideMainTextAtNuclear: true,
   colorsMode: false,
+  maxRotation: 20,
 }
 
 function loadConfig() {

@@ -72,6 +72,7 @@ export function newTextNode() {
 
   const newNodeWrapper = document.createElement("div")
   newNodeWrapper.classList.add("new-text-node")
+  newNodeWrapper.style.rotate = `${(Math.random() * 2 - 1) * config.maxRotation}deg`
 
   const newMessage = document.createElement("p")
   newMessage.textContent = text

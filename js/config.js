@@ -6,6 +6,13 @@ export { config, configResetData }
 
 const adminPanel = document.querySelector(".admin-panel")
 const openPrefsBtn = document.querySelector(".btn-config")
+const PREFS_BTN_KEY = "prefsBtnVisible"
+
+// Apply stored button visibility on page load
+;(() => {
+  const stored = localStorage.getItem(PREFS_BTN_KEY)
+  if (stored === "false") openPrefsBtn.style.display = "none"
+})()
 
 adminPanel.addEventListener("input", handleAdminChange)
 adminPanel.addEventListener("change", handleAdminChange)
@@ -16,9 +23,13 @@ openPrefsBtn.addEventListener("click", () => {
 })
 
 // Keyboard shortcut: type "@@@" to toggle preferences panel
+// Keyboard shortcut: type "xxx" or "XXX" to toggle visibility of the preferences button
 ;(() => {
   let buffer = ""
-  const TRIGGER = "@@@"
+  const TRIGGER_PANEL = "@@@"
+  const TRIGGER_BTN = "xxx"
+  const TRIGGER_BTN_UPPER = "XXX"
+  const MAX_LEN = Math.max(TRIGGER_PANEL.length, TRIGGER_BTN.length)
 
   document.addEventListener("keydown", (e) => {
     const t = e.target
@@ -26,15 +37,24 @@ openPrefsBtn.addEventListener("click", () => {
     if (tag === "INPUT" || tag === "TEXTAREA" || t?.isContentEditable) return
     if (typeof e.key !== "string" || e.key.length !== 1) return
 
-    buffer = (buffer + e.key).slice(-TRIGGER.length)
+    buffer = (buffer + e.key).slice(-MAX_LEN)
 
-    if (buffer === TRIGGER) {
+    if (buffer.endsWith(TRIGGER_PANEL)) {
       translatePreferenceLabels()
       openPreferencesPanel()
+      buffer = ""
+    } else if (buffer.endsWith(TRIGGER_BTN) || buffer.endsWith(TRIGGER_BTN_UPPER)) {
+      togglePrefsButton()
       buffer = ""
     }
   })
 })()
+
+function togglePrefsButton() {
+  const hidden = openPrefsBtn.style.display === "none"
+  openPrefsBtn.style.display = hidden ? "" : "none"
+  localStorage.setItem(PREFS_BTN_KEY, String(hidden))
+}
 
 export function translatePreferenceLabels(lang = getLang()) {
   const dict = PREFERENCES_TEXT?.[lang] ?? PREFERENCES_TEXT?.en ?? {}

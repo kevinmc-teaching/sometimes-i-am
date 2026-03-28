@@ -40,6 +40,7 @@ export const PREFERENCES_TEXT = {
     nodeOpacityTopLimit: "Polyglot mode secondary text: opacity upper limit",
     hideMainTextAtNuclear: "Hide main text during polyglot mode",
     colorsMode: "Colors mode",
+    maxRotation: "Polyglot mode: maximum text rotation",
     "reset-to-defaults": "Reset to defaults",
   },
   fr: {
@@ -57,6 +58,7 @@ export const PREFERENCES_TEXT = {
     nodeOpacityTopLimit: "Mode polyglotte texte secondaire : limite supérieure d'opacité",
     hideMainTextAtNuclear: "Masquer le texte principal en mode polyglotte",
     colorsMode: "Mode couleurs",
+    maxRotation: "Mode polyglotte : rotation maximale du texte",
     "reset-to-defaults": "Réinitialiser par défaut",
   },
   ja: {
@@ -74,6 +76,7 @@ export const PREFERENCES_TEXT = {
     nodeOpacityTopLimit: "多言語モード 副テキスト：不透明度の上限",
     hideMainTextAtNuclear: "多言語モード中はメインテキストを非表示",
     colorsMode: "カラーモード",
+    maxRotation: "多言語モード：テキストの最大回転角",
     "reset-to-defaults": "既定値にリセット",
   },
   it: {
@@ -91,6 +94,7 @@ export const PREFERENCES_TEXT = {
     nodeOpacityTopLimit: "Modalità poliglotta testo secondario: limite superiore di opacità",
     hideMainTextAtNuclear: "Nascondi il testo principale in modalità poliglotta",
     colorsMode: "Modalità colori",
+    maxRotation: "Modalità poliglotta: rotazione massima del testo",
     "reset-to-defaults": "Ripristina valori predefiniti",
   },
   es: {
@@ -108,6 +112,7 @@ export const PREFERENCES_TEXT = {
     nodeOpacityTopLimit: "Modo políglota texto secundario: límite superior de opacidad",
     hideMainTextAtNuclear: "Ocultar el texto principal en modo políglota",
     colorsMode: "Modo colores",
+    maxRotation: "Modo políglota: rotación máxima del texto",
     "reset-to-defaults": "Restablecer valores predeterminados",
   },
   fa: {
@@ -125,6 +130,7 @@ export const PREFERENCES_TEXT = {
     nodeOpacityTopLimit: "حالت چندزبانه متن ثانویه: حد بالای شفافیت",
     hideMainTextAtNuclear: "پنهان‌کردن متن اصلی در حالت چندزبانه",
     colorsMode: "حالت رنگ‌ها",
+    maxRotation: "حالت چندزبانه: حداکثر چرخش متن",
     "reset-to-defaults": "بازنشانی به پیش‌فرض‌ها",
   },
   ur: {
@@ -142,6 +148,7 @@ export const PREFERENCES_TEXT = {
     nodeOpacityTopLimit: "کثیراللسانی موڈ ثانوی متن: شفافیت کی بالائی حد",
     hideMainTextAtNuclear: "کثیراللسانی موڈ میں مرکزی متن چھپائیں",
     colorsMode: "رنگ موڈ",
+    maxRotation: "کثیراللسانی موڈ: زیادہ سے زیادہ متن گردش",
     "reset-to-defaults": "ڈیفالٹس پر ری سیٹ کریں",
   },
   de: {
@@ -159,6 +166,7 @@ export const PREFERENCES_TEXT = {
     nodeOpacityTopLimit: "Vielsprachiger Modus Text sekundär: obere Deckkraftgrenze",
     hideMainTextAtNuclear: "Haupttext im vielsprachigen Modus ausblenden",
     colorsMode: "Farbmodus",
+    maxRotation: "Vielsprachiger Modus: maximale Textrotation",
     "reset-to-defaults": "Auf Standardwerte zurücksetzen",
   },
   ko: {
@@ -176,6 +184,7 @@ export const PREFERENCES_TEXT = {
     nodeOpacityTopLimit: "다언어 모드 보조 텍스트: 불투명도 상한",
     hideMainTextAtNuclear: "다언어 모드에서 메인 텍스트 숨기기",
     colorsMode: "색상 모드",
+    maxRotation: "다언어 모드: 최대 텍스트 회전",
     "reset-to-defaults": "기본값으로 재설정",
   },
   ms: {
@@ -193,6 +202,7 @@ export const PREFERENCES_TEXT = {
     nodeOpacityTopLimit: "Mod poliglot teks sekunder: had atas kelegapan",
     hideMainTextAtNuclear: "Sembunyikan teks utama semasa mod poliglot",
     colorsMode: "Mod warna",
+    maxRotation: "Mod poliglot: putaran teks maksimum",
     "reset-to-defaults": "Tetapkan semula kepada lalai",
   },
 }
