@@ -268,11 +268,11 @@ h1 .span-english {
   color: var(--dimmed);
 }
 
-.nuclear-status[hidden] {
+.polyglot-status[hidden] {
   display: none;
 }
 
-.nuclear-status {
+.polyglot-status {
   grid-column: 1;
   grid-row: 1;
   margin-bottom: .5rem;
@@ -288,15 +288,15 @@ h1 .span-english {
   text-transform: uppercase;
 }
 
-.nuclear-status-label {
+.polyglot-status-label {
   margin-right: 0.25rem;
 }
 
-.nuclear-status-sep {
+.polyglot-status-sep {
   opacity: 0.5;
 }
 
-#nuclear-current {
+#polyglot-current {
   color: var(--activeSitename);
   min-width: 4ch;
   text-align: right;

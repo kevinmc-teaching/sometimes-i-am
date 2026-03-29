@@ -23,11 +23,11 @@
 
     <div class="nav-button-wrapper">
 
-      <div class="nuclear-status" id="nuclear-status" aria-live="polite" hidden>
-        <span class="nuclear-status-label">polyglot mode</span>
-        <span id="nuclear-current">0</span>
-        <span class="nuclear-status-sep">/</span>
-        <span id="nuclear-end">0</span>
+      <div class="polyglot-status" id="polyglot-status" aria-live="polite" hidden>
+        <span class="polyglot-status-label">polyglot mode</span>
+        <span id="polyglot-current">0</span>
+        <span class="polyglot-status-sep">/</span>
+        <span id="polyglot-end">0</span>
       </div>
 
       <nav aria-label="Language">
@@ -83,43 +83,43 @@
       </div>
 
       <div class="label-input-wrapper">
-        <label for="nuclearTrigger">All-Language Start Threshold</label>
-        <input type="range" id="nuclearTrigger" name="nuclearTrigger" min="0" max="500" />
-        <output for="nuclearTrigger"></output>
+        <label for="polyglotTrigger">All-Language Start Threshold</label>
+        <input type="range" id="polyglotTrigger" name="polyglotTrigger" min="0" max="500" />
+        <output for="polyglotTrigger"></output>
       </div>
 
       <div class="label-input-wrapper">
-        <label for="nuclearEnd">All-Language End Threshold</label>
-        <input type="range" id="nuclearEnd" name="nuclearEnd" min="50" max="1000" />
-        <output for="nuclearEnd"></output>
+        <label for="polyglotEnd">All-Language End Threshold</label>
+        <input type="range" id="polyglotEnd" name="polyglotEnd" min="50" max="1000" />
+        <output for="polyglotEnd"></output>
       </div>
 
       <div class="label-input-wrapper">
-        <label for="maxNuclearNodes">Nuclear: Maximum Text Nodes</label>
-        <input type="range" id="maxNuclearNodes" name="maxNuclearNodes" min="40" max="2000" />
-        <output for="maxNuclearNodes"></output>
+        <label for="maxPolyglotNodes">Polyglot: Maximum Text Nodes</label>
+        <input type="range" id="maxPolyglotNodes" name="maxPolyglotNodes" min="40" max="2000" />
+        <output for="maxPolyglotNodes"></output>
       </div>
 
       <div class="label-input-wrapper">
-        <label for="maxFZMessageNode">Maximum Font Size (Nuclear Message)</label>
+        <label for="maxFZMessageNode">Maximum Font Size (Polyglot Message)</label>
         <input type="range" id="maxFZMessageNode" name="maxFZMessageNode" min="0" max="10" />
         <output for="maxFZMessageNode"></output>
       </div>
 
       <div class="label-input-wrapper">
-        <label for="maxFZSynonymNode">Maximum Font Size (Nuclear Synonym)</label>
+        <label for="maxFZSynonymNode">Maximum Font Size (Polyglot Synonym)</label>
         <input type="range" id="maxFZSynonymNode" name="maxFZSynonymNode" min="0" max="10" />
         <output for="maxFZSynonymNode"></output>
       </div>
 
       <div class="label-input-wrapper">
-        <label for="nodeOpacityBtmLimit">Nuclear Text Opacity Bottom Limit</label>
+        <label for="nodeOpacityBtmLimit">Polyglot Text Opacity Bottom Limit</label>
         <input type="range" id="nodeOpacityBtmLimit" name="nodeOpacityBtmLimit" min="0" max="1" step=".1" />
         <output for="nodeOpacityBtmLimit"></output>
       </div>
 
       <div class="label-input-wrapper">
-        <label for="nodeOpacityTopLimit">Nuclear Text Opacity Upper Limit</label>
+        <label for="nodeOpacityTopLimit">Polyglot Text Opacity Upper Limit</label>
         <input type="range" id="nodeOpacityTopLimit" name="nodeOpacityTopLimit" min="0" max="1" step=".1" />
         <output for="nodeOpacityTopLimit"></output>
       </div>

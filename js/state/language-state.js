@@ -1,7 +1,7 @@
 import { config } from "../config-data.js"
 
 let updatesNum = 0
-let nuclearInteractions = 0
+let polyglotInteractions = 0
 let currentBtn = 1
 
 function detectBrowserLang() {
@@ -36,26 +36,26 @@ export function resetUpdatesNum() {
   updatesNum = 0
 }
 
-// NUCLEAR MODE
-export function isNuclear() {
-  return updatesNum >= config.nuclearTrigger
+// POLYGLOT MODE
+export function isPolyglot() {
+  return updatesNum >= config.polyglotTrigger
 }
 
-export function getNuclearInteractions() {
-  return nuclearInteractions
+export function getPolyglotInteractions() {
+  return polyglotInteractions
 }
 
-export function incrementNuclearInteractions() {
-  nuclearInteractions += 1
+export function incrementPolyglotInteractions() {
+  polyglotInteractions += 1
 }
 
-export function shouldExitNuclear() {
-  return nuclearInteractions >= config.nuclearEnd
+export function shouldExitPolyglot() {
+  return polyglotInteractions >= config.polyglotEnd
 }
 
-export function resetNuclear() {
+export function resetPolyglot() {
   updatesNum = 0
-  nuclearInteractions = 0
+  polyglotInteractions = 0
 }
 
 // CURRENT BUTTON

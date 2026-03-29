@@ -19,7 +19,7 @@ export function menuSetup() {
     const langChoice = e.target.value
 
     state.setLang(langChoice)
-    buttons.resetNuclearUI()
+    buttons.resetPolyglotUI()
     textUpdates.updateUIText(langChoice)
 
     const adminPanel = document.querySelector(".admin-panel")

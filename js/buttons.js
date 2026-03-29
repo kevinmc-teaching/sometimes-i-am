@@ -5,9 +5,9 @@ import * as textUpdates from "./text-updates.js"
 import * as sounds from "./sounds.js"
 
 const buttonContainer = document.querySelector(".button-grid")
-const nuclearStatus = document.getElementById("nuclear-status")
-const nuclearCurrentEl = document.getElementById("nuclear-current")
-const nuclearEndEl = document.getElementById("nuclear-end")
+const polyglotStatus = document.getElementById("polyglot-status")
+const polyglotCurrentEl = document.getElementById("polyglot-current")
+const polyglotEndEl = document.getElementById("polyglot-end")
 let abortController = null
 
 export function addButtons() {
@@ -60,20 +60,20 @@ function doButtonStuff(e) {
 
   state.updateCurrentBtn(btnId)
 
-  if (state.isNuclear()) {
-    // Hide main text and show status panel on first nuclear interaction
-    if (state.getNuclearInteractions() === 0) {
-      if (config.hideMainTextAtNuclear) textUpdates.hideMainText()
-      nuclearEndEl.textContent = config.nuclearEnd
-      nuclearStatus.hidden = false
+  if (state.isPolyglot()) {
+    // Hide main text and show status panel on first polyglot interaction
+    if (state.getPolyglotInteractions() === 0) {
+      if (config.hideMainTextAtPolyglot) textUpdates.hideMainText()
+      polyglotEndEl.textContent = config.polyglotEnd
+      polyglotStatus.hidden = false
     }
 
     textUpdates.newTextNode()
-    state.incrementNuclearInteractions()
-    nuclearCurrentEl.textContent = state.getNuclearInteractions()
+    state.incrementPolyglotInteractions()
+    polyglotCurrentEl.textContent = state.getPolyglotInteractions()
 
-    if (state.shouldExitNuclear()) {
-      exitNuclearMode()
+    if (state.shouldExitPolyglot()) {
+      exitPolyglotMode()
     }
     return
   }
@@ -83,18 +83,18 @@ function doButtonStuff(e) {
   state.incrementUpdatesNum()
 }
 
-function exitNuclearMode() {
-  state.resetNuclear()
+function exitPolyglotMode() {
+  state.resetPolyglot()
   textUpdates.showMainText()
   textUpdates.fadeOutTextNodes(() => {
-    nuclearStatus.hidden = true
-    nuclearCurrentEl.textContent = "0"
+    polyglotStatus.hidden = true
+    polyglotCurrentEl.textContent = "0"
   })
 }
 
-export function resetNuclearUI() {
-  state.resetNuclear()
+export function resetPolyglotUI() {
+  state.resetPolyglot()
   textUpdates.showMainText()
-  nuclearStatus.hidden = true
-  nuclearCurrentEl.textContent = "0"
+  polyglotStatus.hidden = true
+  polyglotCurrentEl.textContent = "0"
 }

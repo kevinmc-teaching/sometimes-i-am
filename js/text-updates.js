@@ -66,7 +66,7 @@ export function newTextNode() {
 
   // Enforce node cap — remove oldest if at limit
   const existingNodes = messagesWrapper.querySelectorAll(".new-text-node")
-  if (existingNodes.length >= config.maxNuclearNodes) {
+  if (existingNodes.length >= config.maxPolyglotNodes) {
     existingNodes[0].remove()
   }
 
