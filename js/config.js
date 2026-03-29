@@ -138,7 +138,15 @@ function saveConfig() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(config))
 }
 
+const OUTPUT_UNITS = {
+  maxFZMessage: "cqw",
+  maxFZSynonym: "cqw",
+  maxFZMessageNode: "cqw",
+  maxFZSynonymNode: "cqw",
+  maxRotation: "°",
+}
+
 function updateOutput(id, value) {
   const output = adminPanel.querySelector(`output[for="${id}"]`)
-  if (output) output.value = value
+  if (output) output.value = `${value}${OUTPUT_UNITS[id] ?? ""}`
 }
