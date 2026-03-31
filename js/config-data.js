@@ -16,9 +16,9 @@ export const configResetData = {
   hideMainTextAtPolyglot: true,
   colorsMode: false,
   maxRotation: 20,
-  colorPick1: "#ff0000",
-  colorPick2: "#00cc00",
-  colorPick3: "#0000ff",
+  colorPick1: "#ff1492",
+  colorPick2: "#6464b4",
+  colorPick3: "#fab06b",
 }
 
 function loadConfig() {
