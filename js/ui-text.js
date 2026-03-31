@@ -40,6 +40,7 @@ export const PREFERENCES_TEXT = {
     nodeOpacityTopLimit: "Polyglot mode secondary text: opacity upper limit",
     hideMainTextAtPolyglot: "Hide main text during polyglot mode",
     colorsMode: "Colors mode",
+    colorPick1: "Colors 1 2 3",
     maxRotation: "Polyglot mode: maximum text rotation",
     "reset-to-defaults": "Reset to defaults",
   },

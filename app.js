@@ -4,6 +4,7 @@ import * as menu from "./js/menu.js"
 import * as buttons from "./js/buttons.js"
 import * as sounds from "./js/sounds.js"
 import * as config from "./js/config.js"
+import "./js/credits.js"
 
 const lang = state.getLang()
 

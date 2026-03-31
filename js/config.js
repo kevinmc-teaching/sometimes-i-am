@@ -93,6 +93,12 @@ function handleAdminChange(e) {
     return
   }
 
+  if (type === "color" && id in config) {
+    config[id] = input.value
+    saveConfig()
+    return
+  }
+
   if (type === "range") {
     updateConfig(id, input.value)
     updateOutput(id, input.value)
@@ -130,6 +136,14 @@ export function syncAdminPanelFromConfig() {
     const key = checkbox.id
     if (key in config && typeof config[key] === "boolean") {
       checkbox.checked = config[key]
+    }
+  })
+
+  const colorPickers = adminPanel.querySelectorAll("input[type='color']")
+  colorPickers.forEach((picker) => {
+    const key = picker.id
+    if (key in config && typeof config[key] === "string") {
+      picker.value = config[key]
     }
   })
 }

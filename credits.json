@@ -1,0 +1,80 @@
+{
+  "leads": [
+    { "name": "Leannej", "role": "Lead Artist" },
+    { "name": "My Name Is Scot", "role": "Sound Artist" },
+    { "name": "Kevin McMillan", "role": "Developer" }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "langCode": "en",
+      "contributors": [
+        { "name": "Leannej", "roles": ["Text", "Voice"] }
+      ]
+    },
+    {
+      "language": "Español",
+      "langCode": "es",
+      "contributors": [
+        { "name": "Dina Mascaro", "roles": ["Text", "Voice"] }
+      ]
+    },
+    {
+      "language": "Français",
+      "langCode": "fr",
+      "contributors": [
+        { "name": "Julie Jacques", "roles": ["Text", "Voice"] }
+      ]
+    },
+    {
+      "language": "Italiano",
+      "langCode": "it",
+      "contributors": [
+        { "name": "Alessandra Bordini", "roles": ["Text", "Voice"] }
+      ]
+    },
+    {
+      "language": "Deutsch",
+      "langCode": "de",
+      "contributors": [
+        { "name": "Nina Niisen", "roles": ["Text", "Voice"] }
+      ]
+    },
+    {
+      "language": "日本語",
+      "langCode": "ja",
+      "contributors": [
+        { "name": "Eri Ish", "roles": ["Text"] },
+        { "name": "Tomoyo Ihaya", "roles": ["Voice"] }
+      ]
+    },
+    {
+      "language": "한국어",
+      "langCode": "ko",
+      "contributors": [
+        { "name": "N-Q", "roles": ["Text", "Voice"] }
+      ]
+    },
+    {
+      "language": "فارسی",
+      "langCode": "fa",
+      "contributors": [
+        { "name": "Aki Barabadi", "roles": ["Text", "Voice"] }
+      ]
+    },
+    {
+      "language": "اردو",
+      "langCode": "ur",
+      "contributors": [
+        { "name": "Zohra", "roles": ["Text", "Voice"] }
+      ]
+    },
+    {
+      "language": "Bahasa Melayu",
+      "langCode": "ms",
+      "contributors": [
+        { "name": "Ngeh Chee Yen", "roles": ["Text", "Voice"] }
+      ]
+    }
+  ]
+}
