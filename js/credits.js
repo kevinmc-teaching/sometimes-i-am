@@ -83,12 +83,15 @@ function renderCredits(data) {
     for (const lang of data.languages) {
       if (!lang.contributors?.length) continue
 
+      const entry = document.createElement("div")
+      entry.className = "credits-lang-entry"
+
       const dt = document.createElement("dt")
       dt.textContent = lang.language
       if (RTL_LANGS.has(lang.langCode)) {
         dt.setAttribute("lang", lang.langCode)
       }
-      langDl.appendChild(dt)
+      entry.appendChild(dt)
 
       // Show role labels only when contributors don't all cover both Text & Voice
       const showRoles =
@@ -105,8 +108,10 @@ function renderCredits(data) {
         } else {
           dd.textContent = contributor.name
         }
-        langDl.appendChild(dd)
+        entry.appendChild(dd)
       }
+
+      langDl.appendChild(entry)
     }
 
     frag.appendChild(langDl)

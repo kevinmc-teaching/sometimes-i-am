@@ -142,11 +142,11 @@ nav[aria-label="Language"] {
 }
 
 .btn-config {
-  grid-column: 3;
+  grid-column: 2;
 }
 
 .btn-credits {
-  grid-column: 2;
+  grid-column: 3;
   font-size: .8rem;
   font-family: inherit;
   line-height: 1;
@@ -534,12 +534,28 @@ input[type="checkbox"]:focus-visible {
 
 .credits-dl {
   margin: 0;
+  font-size: .85rem;
+}
+
+.credits-leads {
   display: grid;
   grid-template-columns: 8rem 1fr;
   column-gap: 1.25rem;
   row-gap: .2rem;
   align-items: baseline;
-  font-size: .85rem;
+}
+
+.credits-languages {
+  display: flex;
+  flex-direction: column;
+  row-gap: .2rem;
+}
+
+.credits-lang-entry {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  column-gap: 1.25rem;
+  align-items: baseline;
 }
 
 .credits-dl dt {
