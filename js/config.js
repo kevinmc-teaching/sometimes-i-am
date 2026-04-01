@@ -75,6 +75,12 @@ function openPreferencesPanel() {
   openPrefsBtn.setAttribute("aria-expanded", String(isOpen))
 }
 
+export function closePreferencesPanel() {
+  adminPanel.classList.remove("admin-visible")
+  adminPanel.setAttribute("aria-hidden", "true")
+  openPrefsBtn.setAttribute("aria-expanded", "false")
+}
+
 function handleAdminChange(e) {
   const input = e.target.closest("input")
   if (!input || !adminPanel.contains(input)) return

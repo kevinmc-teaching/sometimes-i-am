@@ -4,7 +4,7 @@ import * as menu from "./js/menu.js"
 import * as buttons from "./js/buttons.js"
 import * as sounds from "./js/sounds.js"
 import * as config from "./js/config.js"
-import "./js/credits.js"
+import { closeCreditsPanel } from "./js/credits.js"
 
 const lang = state.getLang()
 
@@ -14,3 +14,9 @@ sounds.loadSounds(lang)
 
 buttons.addButtons()
 config.syncAdminPanelFromConfig()
+
+document.addEventListener("keydown", (e) => {
+  if (e.key !== "Escape") return
+  config.closePreferencesPanel()
+  closeCreditsPanel()
+})

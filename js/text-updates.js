@@ -93,8 +93,10 @@ export function newTextNode() {
 
   newNodeWrapper.style.position = "absolute"
   const loc = randomLocation()
+  const nodeW = newNodeWrapper.offsetWidth
+  const maxX = messagesWrapper.clientWidth - nodeW / 2
+  newNodeWrapper.style.left = `${Math.min(loc.x, maxX)}px`
   newNodeWrapper.style.top = `${loc.y}px`
-  newNodeWrapper.style.left = `${loc.x}px`
   newNodeWrapper.style.opacity = randomOpacity()
 
   sounds.randomSound(language, number, sound)

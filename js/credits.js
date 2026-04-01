@@ -11,19 +11,13 @@ document.addEventListener("click", (e) => {
   closeCreditsPanel()
 })
 
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && creditsPanel.classList.contains("credits-visible")) {
-    closeCreditsPanel()
-  }
-})
-
 function toggleCreditsPanel() {
   const isOpen = creditsPanel.classList.toggle("credits-visible")
   creditsPanel.setAttribute("aria-hidden", String(!isOpen))
   openCreditsBtn.setAttribute("aria-expanded", String(isOpen))
 }
 
-function closeCreditsPanel() {
+export function closeCreditsPanel() {
   creditsPanel.classList.remove("credits-visible")
   creditsPanel.setAttribute("aria-hidden", "true")
   openCreditsBtn.setAttribute("aria-expanded", "false")
